@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+
+        <h1>MADIBA DESREE</h1>
+        <p class="subheading">Software Developer</p>
+
+        <nav>
+            <ul id="navbarLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="images/resume.pdf" class="resume-btn" target="_blank">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <!-- Add the hamburger menu icon here -->
+            <div class="navbar-toggle" id="navbarToggle">
+                &#x22EE; <!-- This is the vertical ellipsis (three dots) -->
+            </div>
+       
+        </nav>
+
+    
+    </header>
+
+    <!-- Add script reference to activate the toggle functionality -->
+    <script src="script.js"></script>
+
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="images/dez.jpeg" alt="My photo" class="profile-img">
+            <p>
+                <span class="visible-text">
+                    Hi, I'm <strong>Desree Madiba</strong>, an aspiring software developer with a passion for technology and problem-solving. I am currently enrolled in a specialized training program focused on Java, data, and cybersecurity.
+                </span>
+                <span class="hidden-text" style="display: none;">
+                    My journey into coding began with a curiosity for understanding how websites and applications work. I have been learning various languages, such as HTML, CSS, and JavaScript, and I’m eager to dive deeper into web development, data analysis, and artificial intelligence.
+                </span>
+                <a href="#" class="read-more" onclick="toggleReadMore(event)">Read More</a>
+            </p>
+        </div>
+        <a href="#" class="back-to-top">Back to Top </a>
+    </section>
+    
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>My Skills</h2>
+        
+
+        <div class="skill">
+            <h3>HTML & CSS</h3>
+            <!-- <p>A project that involves [description of project].</p> -->
+        </div>
+        <div class="skill">
+            <h3>JAVA SCRIPT</h3>
+            <!-- <p>A project where I built [description of project].</p> -->
+        </div>
+        <div class="skill">
+            <h3>C++</h3>
+            <!-- <p>Another exciting project that showcases my skills in [relevant technology].</p> -->
+        </div>
+        <div class="skill">
+            <h3>MySQL</h3>
+            <!-- <p>Another exciting project that showcases my skills in [relevant technology].</p> -->
+        </div>
+        <a href="#" class="back-to-top">Back to Top </a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:[your-email]">desreedimaky@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/desree-madiba-3880b6272" target="_blank">My LinkedIn Profile</a>
+        <p>GitHub: <a href="https://github.com/desreedimaky" target="_blank">My GitHub Profile</a>
+
+            <form action="https://api.web3forms.com/submit" method="POST"class="contact_inputs">
+                <div class="contact-form">
+                    <input type="hidden" name="access_key" value="1f88d0cb-2b61-4734-a711-56dc8ccea6c7">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" class="contact_inputs" required>
+                
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"class="contact_inputs" required>
+                
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" class="contact_inputs">
+                
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="6"class="contact_inputs" required></textarea>
+                
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 MADIBA DESREE. All Rights Reserved.</p>
+        <a href="#" class="back-to-top">Back to Top </a>
+    </footer>
+
+</body>
+<script>
+    // Add smooth scroll functionality
+    document.querySelector('.back-to-top').addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default anchor click behavior
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Smooth scroll to top
+        });
+    });
+</script>
+</html>
