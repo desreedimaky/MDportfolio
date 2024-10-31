@@ -105,6 +105,28 @@
             </form>
     </section>
 
+<!-- Chatbot Icon Button -->
+<div id="chatbot-icon-container">
+    <img src="images/icon.png" id="chatbot-icon" alt="Chat Icon" onclick="toggleChat()" />
+</div>
+
+<!-- Chatbot Window -->
+<div id="chatbot-container" class="hidden" style="display: none;">
+    <div id="chatbot-header">
+        <h3>Chatbot</h3>
+        <span id="close-chat" onclick="toggleChat()">X</span>
+    </div>
+    <div id="chatbot-messages"></div>
+    <div id="chatbot-options"></div> <!-- Options container -->
+    <div>
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button id="send-btn" type="button" onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 MADIBA DESREE. All Rights Reserved.</p>
