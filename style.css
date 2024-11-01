@@ -32,24 +32,24 @@ header .subheading {
 
 /* General Styles */
 nav {
-    background-color: #4a90e2, #50e3c2;
+    background-color:  #4a90e2, #50e3c2;
     padding: 10px 0;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
-    position:sticky; 
+    position: sticky;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
+    margin: 0;
 }
 
 nav ul li {
-    
     margin-right: 50px;
 }
 
@@ -65,26 +65,30 @@ nav ul li a:hover {
     color: #f4f4f4;
 }
 
-/* Hide the toggle icon (three dots) on larger screens */
+/* Hide the toggle icon (hamburger menu) on larger screens */
 .navbar-toggle {
     display: none;
     font-size: 30px;
     color: white;
     cursor: pointer;
+    z-index: 1001; /* Ensure it's on top */
+    position: absolute;
+    right: 15px;
+    top: 15px;
 }
-
 
 /* Responsive styles for small screens */
 @media (max-width: 768px) {
     nav ul {
-        display: none; 
+        display: none; /* Hide menu initially on small screens */
         flex-direction: column;
         width: 100%;
         position: absolute;
         top: 60px;
-        left:0;
+        left: 0;
         background-color: #0d5e69;
         text-align: left;
+        z-index: 1000;
     }
 
     nav ul li {
@@ -96,15 +100,12 @@ nav ul li a:hover {
     }
 
     .navbar-toggle {
-        display: block; 
-        position: absolute;
-        top: 15px;
-        right:15;
-        cursor: pointer;
+        display: block; /* Show the hamburger icon */
     }
 
     nav.active ul {
-        display: flex; 
+        display: flex; /* Show the menu when active */
+        z-index: 1000;
     }
 }
 
@@ -352,7 +353,7 @@ button[type="submit"]:hover {
 
     form {
         padding: 0 20px;         
-        width: 100%;              
+        width: 60%;              
     }
 }
 
