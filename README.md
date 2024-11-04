@@ -15,4 +15,4 @@ My Skills
 -Tools: Git, VS Code, SQL
 
 link to my portfolio 
-https://desreedimaky.github.io/MyPortfolio/
+https://desreedimaky.github.io/MDportfolio/
