@@ -21,19 +21,19 @@
                 <li><a href="images/resume.pdf" class="resume-btn" target="_blank">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-
-            <!-- Add the hamburger menu icon here -->
+        
+            <!-- Hamburger menu icon -->
             <div class="navbar-toggle" id="navbarToggle">
-                &#x22EE; <!-- This is the vertical ellipsis (three dots) -->
+                &#9776; <!-- Hamburger icon -->
             </div>
-       
         </nav>
+        
 
     
     </header>
 
     <!-- Add script reference to activate the toggle functionality -->
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 
 
     <section id="about">
@@ -104,6 +104,28 @@
                 </div>
             </form>
     </section>
+
+<!-- Chatbot Icon Button -->
+<div id="chatbot-icon-container">
+    <img src="images/icon.png" id="chatbot-icon" alt="Chat Icon" onclick="toggleChat()" />
+</div>
+
+<!-- Chatbot Window -->
+<div id="chatbot-container" class="hidden" style="display: none;">
+    <div id="chatbot-header">
+        <h3>Chatbot</h3>
+        <span id="close-chat" onclick="toggleChat()">X</span>
+    </div>
+    <div id="chatbot-messages"></div>
+    <div id="chatbot-options"></div> <!-- Options container -->
+    <div>
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button id="send-btn" type="button" onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
 
     <!-- Footer -->
     <footer>

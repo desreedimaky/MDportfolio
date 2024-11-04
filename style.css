@@ -32,24 +32,24 @@ header .subheading {
 
 /* General Styles */
 nav {
-    background-color: #4a90e2, #50e3c2;
+    background-color:  #4a90e2, #50e3c2;
     padding: 10px 0;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
-    position:sticky; 
+    position: sticky;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
+    margin: 0;
 }
 
 nav ul li {
-    
     margin-right: 50px;
 }
 
@@ -65,26 +65,30 @@ nav ul li a:hover {
     color: #f4f4f4;
 }
 
-/* Hide the toggle icon (three dots) on larger screens */
+/* Hide the toggle icon (hamburger menu) on larger screens */
 .navbar-toggle {
     display: none;
     font-size: 30px;
     color: white;
     cursor: pointer;
+    z-index: 1001; /* Ensure it's on top */
+    position: absolute;
+    right: 15px;
+    top: 15px;
 }
-
 
 /* Responsive styles for small screens */
 @media (max-width: 768px) {
     nav ul {
-        display: none; 
+        display: none; /* Hide menu initially on small screens */
         flex-direction: column;
         width: 100%;
         position: absolute;
         top: 60px;
-        left:0;
+        left: 0;
         background-color: #0d5e69;
         text-align: left;
+        z-index: 1000;
     }
 
     nav ul li {
@@ -96,15 +100,12 @@ nav ul li a:hover {
     }
 
     .navbar-toggle {
-        display: block; 
-        position: absolute;
-        top: 15px;
-        right:15;
-        cursor: pointer;
+        display: block; /* Show the hamburger icon */
     }
 
     nav.active ul {
-        display: flex; 
+        display: flex; /* Show the menu when active */
+        z-index: 1000;
     }
 }
 
@@ -353,6 +354,7 @@ button[type="submit"]:hover {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     form {
+<<<<<<< HEAD
         padding: 15px; /* Reduce form padding on smaller screens */
         max-width: 100%; /* Ensure form doesn't go beyond screen width */
     }
@@ -365,6 +367,10 @@ button[type="submit"]:hover {
     button[type="submit"] {
         padding: 12px; /* Reduce button padding */
         font-size: 1rem; /* Slightly smaller button text */
+=======
+        padding: 0 20px;         
+        width: 60%;              
+>>>>>>> development
     }
 }
 
@@ -386,6 +392,144 @@ button[type="submit"]:hover {
     }
 }
 
+<<<<<<< HEAD
+=======
+/* Chatbot Icon Style */
+#chatbot-icon-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+#chatbot-icon {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#chatbot-icon:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Chatbot Window Styling */
+#chatbot-container {
+    position: fixed;
+    bottom: 100px; /* Position it above the chat icon */
+    right: 20px;
+    width: 300px;
+    background-color: #f1f1f1;
+    border: 5px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+#chatbot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#chatbot-header h3 {
+    margin: 0;
+}
+
+#close-chat {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Messages area */
+#chatbot-messages {
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 7px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+/* User message styling */
+.user-message {
+    background-color: #e0f7fa;
+    color: #000;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    align-self: flex-start; /* Align user messages to the left */
+    display: inline-block;
+}
+
+/* Bot message styling */
+.bot-message {
+    background-color: #dcedc8;
+    color: #000;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    align-self: flex-end; /* Align bot messages to the right */
+    display: inline-block;
+}
+
+/* Chatbot input */
+#user-input {
+    width: 100%;
+    padding: 5.2px;
+    padding-bottom: 10px;
+}
+
+/* Submit button */
+button[type="button"] {
+    background-color: #50e3c2;
+    color: rgb(10, 1, 1);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Ensures the button takes up the full width of its container */
+    font-size: 1rem; /* Adjust font size for readability */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add smooth transitions */
+}
+
+/* Hover effect for the submit button */
+button[type="button"]:hover {
+    background-color: #2d9ea8;
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+/* Options Container */
+#chatbot-options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+#chatbot-options button {
+    background-color: #36b2cb;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add smooth transitions */
+}
+
+#chatbot-options button:hover {
+    background-color: #2d9ea8;
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+>>>>>>> development
 
 /* Footer */
 footer {
